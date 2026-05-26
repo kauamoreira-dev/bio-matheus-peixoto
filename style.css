@@ -149,7 +149,7 @@ p {
 }
 
 h1 {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   font-size: clamp(2.05rem, 13vw, 3.65rem);
   line-height: 0.95;
 }
@@ -160,13 +160,6 @@ h1 {
   color: #c5cee0;
   font-size: 0.98rem;
   line-height: 1.65;
-}
-
-.availability-line {
-  margin: 14px auto 0;
-  color: rgba(216, 184, 106, 0.92);
-  font-size: 0.84rem;
-  font-weight: 700;
 }
 
 .status-pill {
