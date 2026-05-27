@@ -1,12 +1,12 @@
 window.bioConfig = {
   nome: "Matheus Peixoto",
   descricao:
-    "Estrategista de conteúdo digital com autenticidade, entretenimento e presença online para conectar pessoas, histórias e marcas.",
+    "Estrategista de Conteúdo Digital com autenticidade, entretenimento e presença online para conectar pessoas, histórias e marcas.",
   foto: {
     src: "assets/matheus-peixoto.png",
     alt: "Matheus Peixoto em foto de perfil profissional",
   },
-  status: "Estrategista de conteúdo",
+  status: "Estrategista de Conteúdo",
   linksSociais: [
     {
       tipo: "whatsapp",
