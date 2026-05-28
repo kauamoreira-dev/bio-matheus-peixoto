@@ -104,37 +104,23 @@ a {
   --hero-photo-size: min(62vw, 180px);
   width: var(--hero-photo-size);
   height: var(--hero-photo-size);
+  aspect-ratio: 1;
   margin: 0 auto 20px;
-  padding: 5px;
-  border: 1px solid rgba(244, 199, 15, 0.28);
+  padding: 0;
+  border: 2px solid rgba(244, 199, 15, 0.42);
   border-radius: 50%;
-  background:
-    linear-gradient(145deg, rgba(255, 222, 82, 0.66), rgba(244, 199, 15, 0.24) 52%, rgba(255, 255, 255, 0.1)),
-    rgba(255, 255, 255, 0.08);
-  box-shadow:
-    0 0 0 1px rgba(244, 199, 15, 0.12),
-    0 22px 62px rgba(244, 199, 15, 0.19),
-    0 18px 54px rgba(0, 0, 0, 0.42);
+  background: transparent;
+  box-shadow: 0 0 0 1px rgba(244, 199, 15, 0.1);
   overflow: hidden;
   isolation: isolate;
   contain: paint;
   transform: translateZ(0);
-  -webkit-mask-image: radial-gradient(circle closest-side, #000 99%, transparent 100%);
-  mask-image: radial-gradient(circle closest-side, #000 99%, transparent 100%);
+  clip-path: circle(50%);
 }
 
 .hero-photo::before {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  content: "";
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 18%, rgba(244, 199, 15, 0.36), transparent 58%),
-    radial-gradient(circle at 80% 70%, rgba(255, 237, 169, 0.12), transparent 50%);
-  filter: blur(10px);
-  opacity: 0.95;
-  transform: scale(0.96);
+  display: none;
+  content: none;
 }
 
 .hero-photo img {
@@ -594,6 +580,16 @@ h1 {
     padding: 66px 16px 18px;
   }
 
+}
+
+@media (max-width: 559px) {
+  .profile-glow {
+    display: none;
+  }
+
+  .hero-photo {
+    box-shadow: 0 0 0 1px rgba(244, 199, 15, 0.12);
+  }
 }
 
 @media (max-width: 340px) {

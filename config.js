@@ -33,3 +33,5 @@ window.bioConfig = {
     linkPrincipal: "https://wa.me/559392243953",
   },
 };
+
+
