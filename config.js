@@ -1,7 +1,7 @@
 window.bioConfig = {
   nome: "Matheus Peixoto",
   descricao:
-    "Estrategista de Conteúdo Digital com autenticidade, entretenimento e presença online para conectar pessoas, histórias e marcas.",
+    "Ajudo empresários do Norte a transformar o Instagram em canal de vendas real. Estratégia de conteúdo, posicionamento e acompanhamento de resultado. +R$50M faturados por clientes.",
   foto: {
     src: "assets/matheus-peixoto.png",
     alt: "Matheus Peixoto em foto de perfil profissional",
@@ -28,7 +28,7 @@ window.bioConfig = {
     },
   ],
   ctaFinal: {
-    texto: "Quer criar algo com o Matheus?",
+    texto: "Fale comigo",
     botao: "Chamar no WhatsApp",
     linkPrincipal: "https://wa.me/559392243953",
   },

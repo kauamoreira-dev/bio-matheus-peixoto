@@ -155,7 +155,7 @@ p {
 h1 {
   max-width: 100%;
   margin-bottom: 14px;
-  font-size: clamp(1.82rem, 9.6vw, 3.1rem);
+  font-size: clamp(1.72rem, 8.8vw, 2.82rem);
   line-height: 1;
   white-space: nowrap;
 }
@@ -213,6 +213,120 @@ h1 {
   display: grid;
   gap: 12px;
   margin-top: 22px;
+}
+
+.services-section {
+  margin-top: 26px;
+}
+
+.services-section .eyebrow {
+  margin-bottom: 14px;
+  padding-left: 2px;
+}
+
+.services-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 168px;
+  padding: 64px 18px 20px;
+  border: 1px solid rgba(244, 199, 15, 0.28);
+  border-radius: 24px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.112), rgba(255, 255, 255, 0.048) 48%, rgba(255, 255, 255, 0.03)),
+    rgba(7, 7, 7, 0.82);
+  box-shadow:
+    0 18px 46px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(244, 199, 15, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.11),
+    inset 0 0 32px rgba(244, 199, 15, 0.055);
+  backdrop-filter: blur(14px);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.service-card::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.11), transparent);
+  transform: translateX(-120%);
+  transition: transform 420ms ease;
+}
+
+.service-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(244, 199, 15, 0.035);
+}
+
+.service-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-number {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 28px;
+  border: 1px solid rgba(255, 234, 133, 0.7);
+  border-radius: 999px;
+  color: #111111;
+  font-size: 0.78rem;
+  font-weight: 900;
+  background:
+    linear-gradient(135deg, #fff2ad 0%, var(--yellow) 52%, #d7a900 100%);
+  box-shadow:
+    0 10px 24px rgba(244, 199, 15, 0.24),
+    0 0 20px rgba(244, 199, 15, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+}
+
+.service-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.08rem;
+  line-height: 1.12;
+}
+
+.service-card p {
+  margin-bottom: 0;
+  color: #d1d3dc;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.service-card:hover,
+.service-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(244, 199, 15, 0.5);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.128), rgba(255, 255, 255, 0.054) 48%, rgba(255, 255, 255, 0.034)),
+    rgba(8, 8, 8, 0.86);
+  box-shadow:
+    0 22px 48px rgba(0, 0, 0, 0.34),
+    0 18px 42px rgba(244, 199, 15, 0.15),
+    0 0 0 1px rgba(244, 199, 15, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.13),
+    inset 0 0 38px rgba(244, 199, 15, 0.07);
+}
+
+.service-card:hover::before,
+.service-card:focus-within::before {
+  transform: translateX(120%);
 }
 
 .main-button,
@@ -431,6 +545,18 @@ h1 {
   animation-delay: 280ms;
 }
 
+.services-grid .reveal-card:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+.services-grid .reveal-card:nth-child(3) {
+  animation-delay: 140ms;
+}
+
+.services-grid .reveal-card:nth-child(4) {
+  animation-delay: 210ms;
+}
+
 @keyframes revealUp {
   to {
     opacity: 1;
@@ -445,6 +571,15 @@ h1 {
 
   .profile-card {
     padding: 38px 30px 30px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-card {
+    min-height: 194px;
+    padding: 66px 16px 18px;
   }
 
 }
