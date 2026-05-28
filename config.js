@@ -1,7 +1,7 @@
 window.bioConfig = {
   nome: "Matheus Peixoto",
   descricao:
-    "Ajudo empresários do Norte a transformar o Instagram em canal de vendas real. Estratégia de conteúdo, posicionamento e acompanhamento de resultado. +R$50M faturados por clientes.",
+    "Ajudo empresários do Norte a transformar o Instagram em canal de vendas real. Mais de R$50M faturados por clientes.",
   foto: {
     src: "assets/matheus-peixoto.png",
     alt: "Matheus Peixoto em foto de perfil profissional",
